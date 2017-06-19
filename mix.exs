@@ -19,7 +19,7 @@ defmodule Test.Mixfile do
   def application do
     [mod: {Test, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :mssqlex]]
   end
 
   # Specifies which paths to compile per environment.

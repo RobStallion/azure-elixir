@@ -3,9 +3,9 @@ defmodule Test.PageController do
   alias Test.Product
 
   def index(conn, _params) do
-    query = from p in Product, select: p."ProductName"
+    query = from p in Product, where: p."ProductName" == "katbow"
     Repo.all(query)
-    |> IO.inspect(label: "------> Smelly ")
+    |> IO.inspect(label: "===> over here")
     render conn, "index.html"
   end
 end

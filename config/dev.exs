@@ -37,7 +37,4 @@ config :phoenix, :stacktrace_depth, 20
 
 config :test, Test.Repo,
   adapter: MssqlEcto,
-  username: "testUser",
-  password: "testPass",
-  database: "testBase",
-  hostname: "testServer"
+  hostname: System.get_env("HOSTNAME_URL")
